@@ -119,6 +119,17 @@ fi
 # Start Starship
 eval "$(starship init bash)"
 
+# Start Zoxide
+eval "$(zoxide init bash)"
+
+# Setting aliases for eza
+alias ls="eza --icons --group-directories-first"
+alias ll="eza --icons --group-directories-first -l"
+
+# Setting aliases for yt-dlp
+alias dvid='yt-dlp -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4] -o "%(title)s.%(ext)s"'
+alias dwav='yt-dlp -x --audio-format wav'
+
 # Run Fastfetch
 fastfetch
 

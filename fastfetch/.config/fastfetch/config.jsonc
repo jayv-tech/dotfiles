@@ -1,20 +1,20 @@
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
-        "source": "/home/wombat/Pictures/Linux/Linux Images/Debian_Logo_Blue_BottomText.png",
+        "source": "/home/wombat/Pictures/Linux/EndeavourOS/eos3.png",
         "type": "auto",
-        "height": 20,
-        "width": 43,
+        "height": 30,
+        "width": 40,
         "padding": {
             "top": 2,
-            "left": 0,
+            "left": 2,
         }
     },
     "modules": [
         "break",
         {
             "type": "custom",
-            "format": "\u001b[90m┌────────────────── Samsung Galaxy Book Pro ─────────────────┐"
+            "format": "\u001b[90m┌──────────────────────── Jayv's Homelab ─────────────────────────┐"
         },
         {
             "type": "host",
@@ -44,6 +44,11 @@
             "keyColor": "green"
         },
         {
+            "type": "sound",
+            "key": "│ ├󰓃 SOUND",
+            "keyColor": "green"
+        },
+        {
             "type": "memory",
             "key": "│ ├󰍛 MEMORY",
             "keyColor": "green"
@@ -55,12 +60,12 @@
         },
         {
             "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────────────────────┘"
+            "format": "\u001b[90m└─────────────────────────────────────────────────────────────────┘"
         },
         "break",
         {
             "type": "custom",
-            "format": "\u001b[90m┌──────────────────────── SSD Drives ────────────────────────┐"
+            "format": "\u001b[90m┌──────────────────────────── Drives ─────────────────────────────┐"
         },
         {
             "type": "disk",
@@ -69,22 +74,22 @@
         },
         {
             "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────────────────────┘"
+            "format": "\u001b[90m└─────────────────────────────────────────────────────────────────┘"
         },
         "break",
         {
             "type": "custom",
-            "format": "\u001b[90m┌──────────────────────── Debian SID ────────────────────────┐"
-        },
-        {
-            "type": "os",
-            "key": " OS",
-            "keyColor": "yellow"
+            "format": "\u001b[90m┌───────────────────────── Host Details ──────────────────────────┐"
         },
         {
             "type": "title",
-            "key": "│ ├ USER/HOST",
-            "format": "{user-name}@{host-name}",
+            "key": " Hostname",
+            "format": "{host-name}",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "os",
+            "key": "│ ├ OS",
             "keyColor": "yellow"
         },
         {
@@ -109,17 +114,17 @@
         },
         {
             "type": "shell",
-            "key": "└ └ SHELL",
+            "key": "│ └ SHELL",
             "keyColor": "yellow"
        },
         {
             "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────────────────────┘"
+            "format": "\u001b[90m└─────────────────────────────────────────────────────────────────┘"
         },
         "break",
         {
             "type": "custom",
-            "format": "\u001b[90m┌─────────────────── Desktop Environment ────────────────────┐"
+            "format": "\u001b[90m┌────────────────────── Desktop Environment ──────────────────────┐"
         },
         {
             "type": "de",
@@ -154,12 +159,12 @@
         },
         {
             "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────────────────────┘"
+            "format": "\u001b[90m└─────────────────────────────────────────────────────────────────┘"
         },
         "break",
         {
             "type": "custom",
-            "format": "\u001b[90m┌─────────────────────── Age / Uptime ───────────────────────┐"
+            "format": "\u001b[90m┌────────────────────────── Age/Uptime ───────────────────────────┐"
         },
         {
             "type": "command",
@@ -174,7 +179,7 @@
         },
         {
             "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────────────────────┘"
+            "format": "\u001b[90m└─────────────────────────────────────────────────────────────────┘"
         },
         "break",
     ]
