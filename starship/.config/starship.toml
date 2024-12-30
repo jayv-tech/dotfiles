@@ -83,21 +83,21 @@ truncation_symbol = "…/"
 [git_branch]
 symbol = ""
 style = "bg:base"
-format = '[[ $symbol $branch ](fg:base bg:green)]($style)'
+format = '[[ $symbol $branch ](bg:base)]($style)'
 
 [git_status]
 style = "bg:base"
-format = '[[($all_status$ahead_behind )](fg:base bg:green)]($style)'
+format = '[[($all_status$ahead_behind )](bg:base)]($style)'
 
 [nodejs]
 symbol = ""
 style = "bg:base"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+format = '[[ $symbol( $version) ](bg:base)]($style)'
 
 [python]
 symbol = ""
 style = "bg:base"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+format = '[[ $symbol( $version) ](bg:base)]($style)'
 
 [conda]
 symbol = " "
