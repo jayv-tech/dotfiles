@@ -3,9 +3,15 @@
 format = """
 [](peach)\
 $os\
+[](fg:peach bg:base)\
+$c_space\
+[](bg:peach fg:base)\
 [](bg:rosewater fg:peach)\
 $directory\
 [](fg:rosewater bg:base)\
+$c_space\
+[](bg:peach fg:base)\
+[](fg:peach bg:condagreen)\
 $c\
 $rust\
 $golang\
@@ -16,11 +22,12 @@ $kotlin\
 $haskell\
 $python\
 $conda\
-[](fg:base bg:peach)\
-$docker_context\
+[](fg:condagreen bg:base)\
+$c_space\
+[](bg:peach fg:base)\
 [](bg:rosewater fg:peach)\
 $time\
-[](fg:rosewater) 
+[](fg:rosewater)
 $line_break$character"""
 
 palette = 'catppuccin_mocha'
@@ -52,6 +59,7 @@ surface0 = "#313244"
 base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
+condagreen = "#3EB049"
 
 
 [os]
@@ -80,35 +88,35 @@ truncation_symbol = "…/"
 "Pictures" = " "
 "Developer" = "󰲋 "
 
+[c_space]
+symbol = "C"
+style = "fg:rosewater bg:base"
+format = '[ $symbol $branch ]($style)'
+
 [git_branch]
 symbol = ""
-style = "bg:base"
-format = '[[ $symbol $branch ](bg:base)]($style)'
+style = "fg:rosewater bg:condagreen"
+format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:base"
-format = '[[($all_status$ahead_behind )](bg:base)]($style)'
+style = "fg:rosewater bg:condagreen"
+format = '[($all_status$ahead_behind )]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:base"
-format = '[[ $symbol( $version) ](bg:base)]($style)'
+style = "fg:rosewater bg:condagreen"
+format = '[ $symbol( $version) ]($style)'
 
 [python]
 symbol = ""
-style = "bg:base"
-format = '[[ $symbol( $version) ](bg:base)]($style)'
+style = "fg:rosewater bg:condagreen"
+format = '[ $symbol( $version) ]($style)'
 
 [conda]
 symbol = " "
-style = "bg:base"
+style = "fg:rosewater bg:condagreen"
 ignore_base = false
 format = '[$symbol ($environment) ]($style)'
-
-[docker_context]
-symbol = ""
-style = "bg:mantle"
-format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
 
 [time]
 disabled = false
