@@ -6,7 +6,7 @@
         "height": 30,
         "width": 40,
         "padding": {
-            "top": 3,
+            "top": 1,
             "left": 2,
         }
     },
@@ -82,11 +82,6 @@
         {
             "type": "publicip",
             "key": "│ ├󰲐 PUBLIC IP",
-            "keyColor": "blue"
-        },
-        {
-            "type": "wifi",
-            "key": "│ ├󱛇 WiFi",
             "keyColor": "blue"
         },
         {

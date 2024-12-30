@@ -119,9 +119,6 @@ fi
 # Start Starship
 eval "$(starship init bash)"
 
-# Start Zoxide
-eval "$(zoxide init bash)"
-
 # Setting aliases for eza
 alias ls="eza --icons --group-directories-first"
 alias ll="eza --icons --group-directories-first -l"
