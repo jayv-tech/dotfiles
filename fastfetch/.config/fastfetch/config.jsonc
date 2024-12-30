@@ -6,7 +6,7 @@
         "height": 30,
         "width": 40,
         "padding": {
-            "top": 2,
+            "top": 3,
             "left": 2,
         }
     },
@@ -33,135 +33,66 @@
             "keyColor": "green"
         },
         {
-            "type": "gpu",
-            "key": "│ ├󰍛 GPU",
-            "format": "{3}",
-            "keyColor": "green"
-        },
-        {
-            "type": "display",
-            "key": "│ ├󰹑 DISPLAY",
-            "keyColor": "green"
-        },
-        {
-            "type": "sound",
-            "key": "│ ├󰓃 SOUND",
-            "keyColor": "green"
-        },
-        {
             "type": "memory",
             "key": "│ ├󰍛 MEMORY",
-            "keyColor": "green"
-        },
-        {
-            "type": "swap",
-            "key": "│ ├󰓡 SWAP",
             "keyColor": "green"
         },
         {
             "type": "custom",
             "format": "\u001b[90m└─────────────────────────────────────────────────────────────────┘"
         },
-        "break",
         {
             "type": "custom",
             "format": "\u001b[90m┌──────────────────────────── Drives ─────────────────────────────┐"
         },
         {
             "type": "disk",
-            "key": "│ ├ DISK",
-            "keyColor": "green"
+            "key": " DISK",
+            "keyColor": "yellow"
         },
         {
             "type": "custom",
             "format": "\u001b[90m└─────────────────────────────────────────────────────────────────┘"
         },
-        "break",
         {
             "type": "custom",
             "format": "\u001b[90m┌───────────────────────── Host Details ──────────────────────────┐"
         },
         {
             "type": "title",
-            "key": " Hostname",
+            "key": " HOST",
             "format": "{host-name}",
-            "keyColor": "yellow"
+            "keyColor": "blue"
         },
         {
             "type": "os",
             "key": "│ ├ OS",
-            "keyColor": "yellow"
+            "keyColor": "blue"
         },
         {
             "type": "kernel",
             "key": "│ ├ KERNEL",
-            "keyColor": "yellow"
-        },
-        {
-            "type": "packages",
-            "key": "│ ├󰏖 PACKAGES",
-            "keyColor": "yellow"
-        },
-        {
-            "type": "terminal",
-            "key": "│ ├ TERMINAL",
-            "keyColor": "yellow"
-        },
-        {
-            "type": "terminalfont",
-            "key": "│ ├󰛖 TERMINAL FONT",
-            "keyColor": "yellow"
-        },
-        {
-            "type": "shell",
-            "key": "│ └ SHELL",
-            "keyColor": "yellow"
-       },
-        {
-            "type": "custom",
-            "format": "\u001b[90m└─────────────────────────────────────────────────────────────────┘"
-        },
-        "break",
-        {
-            "type": "custom",
-            "format": "\u001b[90m┌────────────────────── Desktop Environment ──────────────────────┐"
-        },
-        {
-            "type": "de",
-            "key": " DE",
             "keyColor": "blue"
         },
         {
-            "type": "lm",
-            "key": "│ ├ DISPLAY MANAGER",
+            "type": "localip",
+            "key": "│ ├󱦂 LOCAL IP",
             "keyColor": "blue"
         },
         {
-            "type": "wm",
-            "key": "│ ├ WINDOW MANAGER",
+            "type": "publicip",
+            "key": "│ ├󰲐 PUBLIC IP",
             "keyColor": "blue"
         },
         {
-            "type": "wmtheme",
-            "key": "│ ├ THEME",
-            "keyColor": "blue"
-        },
-        {
-            "type": "icons",
-            "key": "│ ├󰉼 ICONS",
-            "keyColor": "blue"
-        },
-        {
-            "type": "font",
-            "key": "│ ├󰛖 SYSTEM FONT",
-            "format": "{3}",
+            "type": "wifi",
+            "key": "│ ├󱛇 WiFi",
             "keyColor": "blue"
         },
         {
             "type": "custom",
             "format": "\u001b[90m└─────────────────────────────────────────────────────────────────┘"
         },
-        "break",
         {
             "type": "custom",
             "format": "\u001b[90m┌────────────────────────── Age/Uptime ───────────────────────────┐"

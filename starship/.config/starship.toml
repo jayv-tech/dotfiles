@@ -18,10 +18,9 @@ $python\
 $conda\
 [](fg:base bg:peach)\
 $docker_context\
-[](fg:peach)\
-$fill\
-[](fg:rosewater)\
+[](bg:rosewater fg:peach)\
 $time\
+[](fg:rosewater) 
 $line_break$character"""
 
 palette = 'catppuccin_mocha'
@@ -54,9 +53,6 @@ base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
 
-# Fill character (empty space) between the left and right prompt
-[fill]
-symbol = " "
 
 [os]
 disabled = false
@@ -118,7 +114,7 @@ format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
 disabled = false
 use_12hr = true
 time_format = "%I:%M %p"
-style = "bg:rosewater"
+style = "fg:base bg:rosewater"
 format = '[[  $time ](fg:base bg:rosewater)]($style)'
 
 [line_break]
