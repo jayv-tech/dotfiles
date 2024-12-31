@@ -13,9 +13,8 @@ $c\
 [](bg:peach fg:base)\
 [](fg:peach bg:condagreen)\
 $nodejs\
-$java\
-$python\
 $conda\
+$python\
 [](fg:condagreen bg:base)\
 $c\
 [](bg:peach fg:base)\
@@ -66,28 +65,19 @@ symbol = "C"
 style = "fg:rosewater bg:base"
 format = '[ $symbol $branch ]($style)'
 
-[git_branch]
-symbol = ""
-style = "fg:rosewater bg:condagreen"
-format = '[ $symbol $branch ]($style)'
-
-[git_status]
-style = "fg:rosewater bg:condagreen"
-format = '[($all_status$ahead_behind )]($style)'
-
 [nodejs]
 symbol = ""
-style = "fg:rosewater bg:condagreen"
+style = "fg:base bg:condagreen"
 format = '[ $symbol( $version) ]($style)'
 
 [python]
 symbol = ""
-style = "fg:rosewater bg:condagreen"
+style = "fg:base bg:condagreen"
 format = '[ $symbol( $version) ]($style)'
 
 [conda]
 symbol = " "
-style = "fg:rosewater bg:condagreen"
+style = "fg:base bg:condagreen"
 ignore_base = false
 format = '[$symbol ($environment) ]($style)'
 
