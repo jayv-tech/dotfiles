@@ -120,11 +120,12 @@ fi
 eval "$(starship init bash)"
 
 # Setting aliases for eza
-alias l="eza -lTag --level=2 --icons --group-directories-first"
+alias l="eza --icons --group-directories-first"
 alias ls="eza --icons --group-directories-first"
 alias ll="eza -lg --icons --group-directories-first"
 alias la="eza -lag --icons"
 alias lt="eza -lTg --icons"
+alias lh="eza -lTag --level=1 --icons --group-directories-first"
 alias lt1="eza -lTg --level=1 --icons --group-directories-first"
 alias lt2="eza -lTg --level=2 --icons --group-directories-first"
 alias lt3="eza -lTg --level=3 --icons --group-directories-first"
