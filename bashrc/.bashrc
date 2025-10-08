@@ -116,9 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Start Starship
-eval "$(starship init bash)"
-
 # Setting aliases for eza
 alias l="eza --icons --group-directories-first"
 alias ls="eza --icons --group-directories-first"
@@ -134,26 +131,23 @@ alias lta1="eza -lTag --level=1 --icons --group-directories-first"
 alias lta2="eza -lTag --level=2 --icons --group-directories-first"
 alias lta3="eza -lTag --level=3 --icons --group-directories-first"
 
-
 # Setting aliases for yt-dlp
 alias dvid='yt-dlp -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4] -o "%(title)s.%(ext)s"'
 alias dwav='yt-dlp -x --audio-format wav'
 
+# Deno completions
+. "$HOME/.local/bin/env"
+. "/home/jayv/.deno/env"
+source /home/jayv/.local/share/bash-completion/completions/deno.bash
+
+# FZF integration
+eval "$(fzf --bash)"
+
+# Zoxide integration
+eval "$(zoxide init bash)"
+
+# Start Starship
+eval "$(starship init bash)"
+
 # Run Fastfetch
 fastfetch
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/jayv/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/jayv/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/jayv/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/jayv/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-

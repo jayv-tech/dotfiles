@@ -1,0 +1,79 @@
+# alacritty.toml — minimal, performance-first config
+
+# Import a single active theme file
+import = ["~/.config/alacritty/themes/catppuccin-mocha.toml"]
+
+# Live reload (useful, small cost only on config change)
+live_config_reload = true
+
+# Use working directory of the shell that spawns Alacritty
+working_directory = "None"
+
+# Window
+[window]
+dynamic_padding = true
+# For maximum snappiness, set opacity = 1.0; change if you want slight transparency.
+opacity = 1.0
+padding = { x = 6, y = 6 }
+decorations = "Full"
+startup_mode = "Windowed"
+
+# Font (system fallback if not installed)
+[font]
+size = 14
+normal = { family = "Agave Nerd Font Mono", style = "Regular" }
+bold = { family = "Agave Nerd Font Mono", style = "Bold" }
+bold_italic = { family = "Agave Nerd Font Mono", style = "Bold Italic" }
+italic = { family = "Agave Nerd Font Mono", style = "Italic" }
+# Use builtin box drawing to reduce rendering issues with certain fonts:
+builtin_box_drawing = true
+
+# Scrolling — large history but tuned for speed
+[scrolling]
+history = 10000
+multiplier = 3
+
+# Cursor
+[cursor]
+style = "Beam"
+unfocused_hollow = true
+
+# Shell — use default shell
+[shell]
+program = "/usr/bin/zsh"
+args = ["-l"]
+
+# Environment — ensure 256/truecolor
+[env]
+TERM = "xterm-256color"
+
+# Keybindings
+[[keyboard.bindings]]
+key = "C"
+mods = "Control|Shift"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "V"
+mods = "Control|Shift"
+action = "Paste"
+
+[[keyboard.bindings]]
+key = "Plus"
+mods = "Control"
+action = "IncreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Minus"
+mods = "Control"
+action = "DecreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Key0"
+mods = "Control"
+action = "ResetFontSize"
+
+[[keyboard.bindings]]
+key = "N"
+mods = "Control|Shift"
+action = "SpawnNewInstance"
