@@ -151,3 +151,4 @@ eval "$(starship init bash)"
 
 # Run Fastfetch
 fastfetch
+. "$HOME/.cargo/env"

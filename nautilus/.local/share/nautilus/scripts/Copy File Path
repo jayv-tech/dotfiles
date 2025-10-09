@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Get the file path of the selected item or current directory.
+# If a file/folder is selected, use NAUTILUS_SCRIPT_SELECTED_FILE_PATHS.
+# If nothing is selected (right-click on empty space), use NAUTILUS_SCRIPT_CURRENT_URI.
+
+if [ -n "$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS" ]; then
+    # File/folder is selected
+    FULL_PATH="$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS"
+    MESSAGE="Full path to selected file is copied to your clipboard!"
+else
+    # Nothing selected, use current directory
+    # Convert URI format (file:///path) to regular path and decode URL encoding
+    FULL_PATH=$(echo "$NAUTILUS_SCRIPT_CURRENT_URI" | sed 's|^file://||' | python3 -c "import sys; from urllib.parse import unquote; print(unquote(sys.stdin.read().strip()))")
+    MESSAGE="Current directory path is copied to your clipboard!"
+fi
+
+# Copy the file path to the clipboard using xclip.
+echo -n "$FULL_PATH" | xclip -selection clipboard
+
+# Notify the user that the path has been copied to the clipboard.
+notify-send "$MESSAGE" "$FULL_PATH"

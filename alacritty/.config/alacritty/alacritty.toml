@@ -78,3 +78,9 @@ action = "ResetFontSize"
 key = "N"
 mods = "Control|Shift"
 action = "SpawnNewInstance"
+
+# Mouse bindings
+[[mouse.bindings]]
+mouse = "Right"
+mods = "None"
+action = "Paste"

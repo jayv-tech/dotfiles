@@ -11,6 +11,11 @@ $directory\
 [](fg:rosewater bg:base)\
 $c\
 [](bg:peach fg:base)\
+[](bg:rosewater fg:peach)\
+$git_branch\
+[](fg:rosewater bg:base)\
+$c\
+[](bg:peach fg:base)\
 [](fg:peach bg:condagreen)\
 $nodejs\
 $conda\
@@ -59,6 +64,13 @@ truncation_symbol = "…/"
 "Music" = "󰝚 "
 "Pictures" = " "
 "Developer" = "󰲋 "
+
+[git_branch]
+symbol = ' '
+style = "fg:base bg:rosewater"
+truncation_length = 10
+truncation_symbol = ''
+format = '[ $symbol$branch(:$remote_branch) ]($style)'
 
 [c]
 symbol = "C"

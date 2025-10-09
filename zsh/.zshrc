@@ -8,12 +8,22 @@ SAVEHIST=50000
 setopt beep
 bindkey -e            # emacs keybindings; use 'bindkey -v' for vi bindings
 
+# Emacs-style word movement (add after `bindkey -e`)
+bindkey '\e[1;5C'   forward-word
+bindkey '\e[5C'     forward-word
+bindkey '\e[1;9C'   forward-word
+
+bindkey '\e[1;5D'   backward-word
+bindkey '\e[5D'     backward-word
+bindkey '\e[1;9D'   backward-word
+
 # ---------------------------
 # Shell behavior niceties
 # ---------------------------
 # cd into a directory by name
 setopt autocd
-
+# keep normal globbing behavior, but don't error when a pattern has no matches
+setopt NONOMATCH
 # Better history behavior
 setopt share_history       # share history across sessions
 setopt inc_append_history  # write each command to history immediately
@@ -37,6 +47,11 @@ export LANG="${LANG:-en_US.UTF-8}"
 # Deno
 # ---------------------------
 [ -f "$HOME/.deno/env" ] && source "$HOME/.deno/env"
+
+# ---------------------------
+# Rust (cargo)
+# ---------------------------
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
 # ---------------------------
 # FPATH for custom completions
