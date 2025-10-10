@@ -54,6 +54,15 @@ export LANG="${LANG:-en_US.UTF-8}"
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
 # ---------------------------
+# Go
+# ---------------------------
+if [ -d "/usr/local/go" ]; then
+  export GOROOT=/usr/local/go
+  export GOPATH=$HOME/go
+  export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+fi
+
+# ---------------------------
 # FPATH for custom completions
 # ---------------------------
 FPATH_DIR="$HOME/.zsh/completions"
