@@ -6,7 +6,7 @@
 
 if [ -n "$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS" ]; then
     # File/folder is selected
-    FULL_PATH="$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS"
+    FULL_PATH=$(echo "$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS" | tr -d '\n')
     MESSAGE="Full path to selected file is copied to your clipboard!"
 else
     # Nothing selected, use current directory
