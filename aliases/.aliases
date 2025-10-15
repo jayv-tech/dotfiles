@@ -32,3 +32,49 @@ noglob dwav() {
 
 # Lazydocker
 alias lzd='lazydocker'
+
+# Update all UV packages
+# Add to ~/.zshrc
+uv_update_all() {
+  local base="${1:-/mnt/storage/Code}"   # optional arg - defaults to /mnt/storage/Code
+  local -i total=0 success=0 fail=0
+  local -a files
+
+  printf "🔎 Searching for uv projects in: %s\n" "$base"
+
+  # Gather matching files (handles spaces/newlines safely)
+  IFS=$'\n' files=($(find "$base" -type f \( -name 'uv.lock' -o -name 'pyproject.toml' \) 2>/dev/null))
+
+  if (( ${#files[@]} == 0 )); then
+    printf "⚠️  No uv projects found under %s\n" "$base"
+    return 0
+  fi
+
+  for f in "${files[@]}"; do
+    ((total++))
+    dir=${f%/*}
+    printf "\n[%d/%d] 📦 Updating: %s\n" "$total" "${#files[@]}" "$dir"
+
+    # run in a subshell so we don't change caller's cwd
+    if (cd "$dir" && uv lock --upgrade && uv sync); then
+      printf "  ✔ Updated %s\n" "$dir"
+      ((success++))
+    else
+      printf "  ✖ Skipped/failed: %s\n" "$dir"
+      ((fail++))
+    fi
+  done
+
+  printf "\n🧹 Pruning uv cache...\n"
+  if uv cache prune; then
+    printf "  ✔ Cache pruned\n"
+  else
+    printf "  ⚠️  uv cache prune failed (non-fatal)\n"
+  fi
+
+  printf "\n✅ Done — total: %d, succeeded: %d, failed: %d\n" "$total" "$success" "$fail"
+}
+
+# Usage:
+# uv_update_all            # default: /mnt/storage/Code
+# uv_update_all /path/to/dir  # specify another base directory
